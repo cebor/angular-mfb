@@ -1,0 +1,23 @@
+{
+  "name": "angular-mfb",
+  "version": "0.1.0",
+  "homepage": "https://github.com/cebor/angular-mfb",
+  "authors": [
+    "cebor"
+  ],
+  "license": "MIT",
+  "main": [
+    "dist/css/mfb.min.css",
+    "dist/mfb-directive.min.js"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src",
+    "demo",
+    "test",
+    "package.json",
+    "gulpfile.js"
+  ]
+}
