@@ -65,7 +65,7 @@
           scope.menuState = scope.menuState === openState ? closedState : openState;
         }
 
-        scope.click = function click() {
+        scope.click = function () {
           // If there is a main action, let's fire it
           if (scope.mainAction) {
             scope.mainAction();
