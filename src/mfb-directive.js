@@ -13,10 +13,14 @@
       '       style="background: transparent; box-shadow: none;"' +
       '       ng-attr-data-mfb-label="{{label}}" class="mfb-component__button--main">' +
       '     <md-button class="md-fab" aria-label={{label}} style="position:relative; margin: 0; padding:0;">' +
-      '       <md-icon style="left: 0; position: relative;" md-svg-icon="{{resting}}"' +
-      '         class="mfb-component__main-icon--resting"></md-icon>' +
-      '       <md-icon style="position:relative;" md-svg-icon="{{active}}"' +
-      '         class="mfb-component__main-icon--active"></md-icon>' +
+      '       <md-icon ng-if="resting && !svgResting" style="left: 0; position: relative;"' +
+      '         class="mfb-component__main-icon--resting">{{resting}}</md-icon>' +
+      '       <md-icon ng-if="active && !svgActive" style="position:relative;"' +
+      '         class="mfb-component__main-icon--active">{{active}}</md-icon>' +
+      '       <md-icon ng-if="svgResting && !resting" style="left: 0; position: relative;"' +
+      '          md-svg-icon="{{svgResting}}" class="mfb-component__main-icon--resting"></md-icon>' +
+      '       <md-icon ng-if="svgActive && !active" style="position:relative;"' +
+      '          md-svg-icon="{{svgActive}}" class="mfb-component__main-icon--active"></md-icon>' +
       '     </md-button>' +
       '    </a>' +
       '    <ul class="mfb-component__list" ng-transclude>' +
@@ -30,7 +34,8 @@
       '  <a href="" data-mfb-label="{{label}}" class="mfb-component__button--child" ' +
       '     style="background: transparent; box-shadow: none;">' +
       '     <md-button style="margin: 0;" class="md-fab" aria-label={{label}}>' +
-      '       <md-icon md-svg-icon="{{icon}}"></md-icon>' +
+      '       <md-icon ng-if="icon && !svg">{{icon}}</md-icon>' +
+      '       <md-icon ng-if="svg && !icon" md-svg-icon="{{svg}}"></md-icon>' +
       '     </md-button>' +
       '  </a>' +
       '</li>'
@@ -47,6 +52,8 @@
         effect: '@',
         label: '@',
         menuClass: '@',
+        svgResting: '@svgRestingIcon',
+        svgActive: '@svgActiveIcon',
         resting: '@restingIcon',
         active: '@activeIcon',
         mainAction: '&',
@@ -91,6 +98,7 @@
       restrict: 'EA',
       replace: true,
       scope: {
+        svg: '@svgIcon',
         icon: '@',
         label: '@',
         buttonClass: '@'
