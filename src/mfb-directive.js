@@ -12,7 +12,7 @@
       '    <a ng-click="click()"' +
       '       style="background: transparent; box-shadow: none;"' +
       '       ng-attr-data-mfb-label="{{label}}" class="mfb-component__button--main">' +
-      '     <md-button class="md-fab" aria-label={{label}} style="position:relative; margin: 0; padding:0;">' +
+      '     <md-button class="md-fab {{menuClass}}" aria-label={{label}} style="position:relative; margin: 0; padding:0;">' +
       '       <md-icon ng-if="resting && !svgResting" style="left: 0; position: relative;"' +
       '         class="mfb-component__main-icon--resting">{{resting}}</md-icon>' +
       '       <md-icon ng-if="active && !svgActive" style="position:relative;"' +
@@ -33,7 +33,7 @@
       '<li>' +
       '  <a href="" data-mfb-label="{{label}}" class="mfb-component__button--child" ' +
       '     style="background: transparent; box-shadow: none;">' +
-      '     <md-button style="margin: 0;" class="md-fab" aria-label={{label}}>' +
+      '     <md-button style="margin: 0;" class="md-fab {{buttonClass}}" aria-label={{label}}>' +
       '       <md-icon ng-if="icon && !svg">{{icon}}</md-icon>' +
       '       <md-icon ng-if="svg && !icon" md-svg-icon="{{svg}}"></md-icon>' +
       '     </md-button>' +
