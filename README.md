@@ -2,16 +2,4 @@
 
 ## Info
 
-This project was mostly inspired by https://github.com/nobitagit/material-floating-button.
-
-## Install
-
-### 1.
-
-```bash
-bower install angular-mfb
-```
-
-### 2.
-
-Add `ngMfb` to your angular modules.
+Discontinued: Its now included! - https://material.angularjs.org/0.10.0-rc2/#/demo/material.components.fabSpeedDial
